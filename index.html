@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Davies Group | Registration</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7f6;
+  color: #242b27;
+}
+
+.header {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e5e9e6;
+}
+
+.logo {
+  font-size: 23px;
+  font-weight: 800;
+  color: #153e2d;
+}
+
+.logo span {
+  color: #26a269;
+  margin-left: 5px;
+}
+
+.help {
+  text-decoration: none;
+  color: #287c54;
+  font-size: 14px;
+}
+
+.register-container {
+  min-height: calc(100vh - 75px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 20px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 470px;
+  background: white;
+  padding: 38px;
+  border-radius: 12px;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.06);
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.welcome h1 {
+  font-size: 27px;
+  margin-bottom: 12px;
+  color: #183d2d;
+}
+
+.welcome p {
+  font-size: 14px;
+  color: #78827c;
+  line-height: 1.6;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.field {
+  margin-bottom: 19px;
+  flex: 1;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce3de;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+.field input:focus {
+  border-color: #269b65;
+  box-shadow: 0 0 0 3px rgba(38,155,101,0.1);
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 65px;
+}
+
+.toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #278b59;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.terms {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  font-size: 12px;
+  color: #68736c;
+  margin: 8px 0 22px;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 14px;
+  background: #168b54;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #106e41;
+}
+
+.login-link {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 24px;
+  color: #747d77;
+}
+
+.login-link a {
+  color: #168b54;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  color: #89918c;
+  font-size: 11px;
+  margin-top: 30px;
+}
+
+#statusMessage {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media(max-width:500px) {
+  .register-card {
+    padding: 25px 20px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="logo">DAVIES<span>GROUP</span></div>
+  <a href="#" class="help">Need help?</a>
+</header>
+
+<main class="register-container">
+
+<div class="register-card">
+
+  <div class="welcome">
+    <h1>Create your account</h1>
+    <p>Join Davies Group and explore exciting career opportunities.</p>
+  </div>
+
+  <form id="registerForm"
+        action="https://submit-form.com/eQ3xanPXD"
+        method="POST">
+
+    <div class="form-row">
+      <div class="field">
+        <label for="firstName">First name</label>
+        <input type="text" id="firstName"
+               name="firstName" placeholder="First name" required>
+      </div>
+
+      <div class="field">
+        <label for="lastName">Last name</label>
+        <input type="text" id="lastName"
+               name="lastName" placeholder="Last name" required>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="email">Email address</label>
+      <input type="email" id="email" name="email"
+             placeholder="name@example.com" required>
+    </div>
+
+    <div class="field">
+      <label for="password">Create password</label>
+      <div class="password-box">
+        <input type="password" id="password" name="password"
+               minlength="8" placeholder="Create a password" required>
+        <button type="button" class="toggle"
+                onclick="togglePassword('password',this)">Show</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="confirmPassword">Confirm password</label>
+      <div class="password-box">
+        <input type="password" id="confirmPassword" name="confirmPassword"
+               minlength="8" placeholder="Confirm password" required>
+        <button type="button" class="toggle"
+                onclick="togglePassword('confirmPassword',this)">Show</button>
+      </div>
+      <small id="passwordMessage"></small>
+    </div>
+
+    <input type="hidden" name="passwordMatch" id="passwordMatch">
+
+    <label class="terms">
+      <input type="checkbox" required>
+      <span>I agree to the Terms of Service and Privacy Policy.</span>
+    </label>
+
+    <button type="submit" class="register-btn">
+      Create account
+    </button>
+
+    <p id="statusMessage" role="status"></p>
+
+  </form>
+
+  <div class="login-link">
+    Already have an account? <a href="#">Sign in</a>
+  </div>
+
+</div>
+
+<p class="footer">
+  © 2026 Davies Group Limited. All rights reserved.
+</p>
+
+</main>
+
+<script>
+function togglePassword(id, button) {
+  const field = document.getElementById(id);
+
+  if (field.type === "password") {
+    field.type = "text";
+    button.textContent = "Hide";
+  } else {
+    field.type = "password";
+    button.textContent = "Show";
+  }
+}
+
+document.getElementById("registerForm").addEventListener("submit", function(event) {
+
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirmPassword").value;
+  const message = document.getElementById("passwordMessage");
+
+  if (password !== confirmPassword) {
+    event.preventDefault();
+    message.style.color = "red";
+    message.textContent = "Passwords do not match.";
+    return;
+  }
+
+  document.getElementById("passwordMatch").value = "Yes";
+
+});
+</script>
+
+</body>
+</html>
